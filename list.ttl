@@ -1,0 +1,64 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix list: <http://purl.org/atextor/ontology/list#> .
+
+<http://purl.org/atextor/ontology/list> a owl:Ontology;
+	rdfs:label "Linked List Ontology";
+	dcterms:creator "Andreas Textor";
+	dcterms:description "This ontology models a linked list, similar to RDF lists, but valid for use in OWL."@en;
+	dcterms:subject "Data Structures";
+	dcterms:rights "Creative Commons Attribution Share Alike 3.0 License";
+	dcterms:title "Linked List Ontology";
+	owl:versionInfo "1.0.0".
+
+list:hasContent a owl:FunctionalProperty,
+		owl:ObjectProperty .
+
+list:isFollowedBy a owl:ObjectProperty,
+		owl:TransitiveProperty .
+
+list:hasNext a owl:FunctionalProperty,
+		owl:IrreflexiveProperty,
+		owl:ObjectProperty;
+	rdfs:domain list:Element;
+	rdfs:range list:Element;
+	rdfs:subPropertyOf list:isFollowedBy .
+
+list:Element a owl:Class;
+	rdfs:subClassOf [
+		a owl:Restriction;
+		owl:onProperty list:isFollowedBy;
+		owl:allValuesFrom list:Element
+	] .
+
+list:List a owl:Class;
+	rdfs:subClassOf [
+		a owl:Restriction;
+		owl:onProperty list:isFollowedBy;
+		owl:allValuesFrom list:Element
+	] .
+
+list:Terminal a owl:Class;
+	owl:equivalentClass [
+		a owl:Class;
+		owl:oneOf ( list:NIL )
+	];
+	rdfs:subClassOf list:Element,
+			[ a owl:Restriction;
+				owl:onProperty list:hasContent;
+				owl:maxCardinality "0"^^xsd:nonNegativeInteger
+			],
+			[
+				a owl:Class;
+				owl:complementOf [
+					a owl:Restriction;
+					owl:onProperty list:hasNext;
+					owl:someValuesFrom owl:Thing
+				]
+			] .
+
+list:NIL a owl:NamedIndividual,
+		list:Terminal .
+

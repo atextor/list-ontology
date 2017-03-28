@@ -1,0 +1,6 @@
+#+TITLE: Linked List Ontology
+#+AUTHOR: Andreas Textor
+#+EMAIL: mail@atextor.de
+#+DATE: 2017-03-28
+
+An ontology for modeling linked lists in OWL.
