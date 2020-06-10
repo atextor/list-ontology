@@ -1,0 +1,17 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "960a62580ca1e8b9a8616733801b858c" "list:Terminal" "list:Element" ; /*classes style*/
+	"list:Terminal" -> "960a62580ca1e8b9a8616733801b858c" [ label = "owl:equivalentClass" ];
+	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
+	"NULL" -> "list:NIL" [ label = "rdf:first" ];
+	"NULL" -> "owl:Thing" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "list:hasNext" [ label = "owl:onProperty" ];
+	"NULL" -> "list:hasContent" [ label = "owl:onProperty" ];
+	"NULL" -> "2873c706:1729c05a873:-7ffc" [ label = "owl:oneOf" ];
+	"NULL" -> "list:Element" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "list:isFollowedBy" [ label = "owl:onProperty" ];
+	"list:hasNext" -> "list:isFollowedBy" [ label = "rdfs:subPropertyOf" ];
+	"list:Element" -> "list:Element" [ label = "list:hasNext" ];
+
+}

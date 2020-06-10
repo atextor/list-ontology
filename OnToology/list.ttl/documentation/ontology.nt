@@ -1,0 +1,114 @@
+<http://purl.org/atextor/ontology/list> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/atextor/ontology/list> <http://purl.org/dc/terms/creator> "Andreas Textor" .
+<http://purl.org/atextor/ontology/list> <http://purl.org/dc/terms/description> "This ontology models a linked list, similar to RDF lists, but valid for use in OWL."@en .
+<http://purl.org/atextor/ontology/list> <http://purl.org/dc/terms/rights> "Creative Commons Attribution Share Alike 3.0 License" .
+<http://purl.org/atextor/ontology/list> <http://purl.org/dc/terms/subject> "Data Structures" .
+<http://purl.org/atextor/ontology/list> <http://purl.org/dc/terms/title> "Linked List Ontology" .
+<http://purl.org/atextor/ontology/list> <http://www.w3.org/2000/01/rdf-schema#label> "Linked List Ontology" .
+<http://purl.org/atextor/ontology/list> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/rights
+<http://purl.org/dc/terms/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/subject
+<http://purl.org/dc/terms/subject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/atextor/ontology/list#hasContent
+<http://purl.org/atextor/ontology/list#hasContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/atextor/ontology/list#hasContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+# 
+# http://purl.org/atextor/ontology/list#hasNext
+<http://purl.org/atextor/ontology/list#hasNext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/atextor/ontology/list#hasNext> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/atextor/ontology/list#isFollowedBy> .
+<http://purl.org/atextor/ontology/list#hasNext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/atextor/ontology/list#hasNext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://purl.org/atextor/ontology/list#hasNext> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/atextor/ontology/list#Element> .
+<http://purl.org/atextor/ontology/list#hasNext> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/atextor/ontology/list#Element> .
+# 
+# http://purl.org/atextor/ontology/list#isFollowedBy
+<http://purl.org/atextor/ontology/list#isFollowedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/atextor/ontology/list#isFollowedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/atextor/ontology/list#Element
+<http://purl.org/atextor/ontology/list#Element> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/atextor/ontology/list#Element> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/atextor/ontology/list#isFollowedBy> .
+_:genid1 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.org/atextor/ontology/list#Element> .
+# 
+# http://purl.org/atextor/ontology/list#List
+<http://purl.org/atextor/ontology/list#List> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/atextor/ontology/list#List> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/atextor/ontology/list#isFollowedBy> .
+_:genid2 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.org/atextor/ontology/list#Element> .
+# 
+# http://purl.org/atextor/ontology/list#Terminal
+<http://purl.org/atextor/ontology/list#Terminal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/atextor/ontology/list#Terminal> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid3 <http://www.w3.org/2002/07/owl#oneOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/atextor/ontology/list#NIL> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://purl.org/atextor/ontology/list#Terminal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/atextor/ontology/list#Element> .
+<http://purl.org/atextor/ontology/list#Terminal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid5 <http://www.w3.org/2002/07/owl#complementOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/atextor/ontology/list#hasNext> .
+_:genid6 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+<http://purl.org/atextor/ontology/list#Terminal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/atextor/ontology/list#hasContent> .
+_:genid7 <http://www.w3.org/2002/07/owl#maxCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/atextor/ontology/list#NIL
+<http://purl.org/atextor/ontology/list#NIL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/atextor/ontology/list#NIL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/atextor/ontology/list#Terminal> .
+# 
+# Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/

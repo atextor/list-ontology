@@ -1,0 +1,8 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "775779d4789ba2613333918ca80193a2" "list:Terminal" "list:Element" ; /*classes style*/
+	"list:Terminal" -> "775779d4789ba2613333918ca80193a2" [ label = "rdfs:subClassOf" ];
+	"list:Terminal" -> "list:Element" [ label = "rdfs:subClassOf" ];
+
+}
