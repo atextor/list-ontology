@@ -1,0 +1,49 @@
+{
+  "@context" : {
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "Terminal" : {
+      "@id" : "http://purl.org/atextor/ontology/list#Terminal"
+    },
+    "Thing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    },
+    "hasContent" : {
+      "@id" : "http://purl.org/atextor/ontology/list#hasContent",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "isFollowedBy" : {
+      "@id" : "http://purl.org/atextor/ontology/list#isFollowedBy",
+      "@type" : "@id"
+    },
+    "rights" : {
+      "@id" : "http://purl.org/dc/terms/rights"
+    },
+    "subject" : {
+      "@id" : "http://purl.org/dc/terms/subject"
+    },
+    "hasNext" : {
+      "@id" : "http://purl.org/atextor/ontology/list#hasNext",
+      "@type" : "@id"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "List" : {
+      "@id" : "http://purl.org/atextor/ontology/list#List"
+    },
+    "Element" : {
+      "@id" : "http://purl.org/atextor/ontology/list#Element"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    }
+  }
+}
